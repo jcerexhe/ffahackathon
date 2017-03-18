@@ -19,4 +19,5 @@ $( document ).ready(function(){
   $(".button-collapse").sideNav();
   $('select').material_select();
   $('.tooltipped').tooltip({delay: 50});
+  $(".dropdown-button").dropdown();
 })

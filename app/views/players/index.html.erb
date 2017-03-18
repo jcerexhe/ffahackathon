@@ -1,6 +1,8 @@
 <h4>Players</h4>
 
-<a href="<%= new_player_path %>" class="waves-effect waves-light btn teal lighten-2"><i class="material-icons left">call_made</i>New Player</a>
+<% if current_user.admin? %>
+  <a href="<%= new_player_path %>" class="waves-effect waves-light btn teal lighten-2"><i class="material-icons left">call_made</i>New Player</a>
+<% end %>
 
 <div class="flex-container-wrap">
   <% @players.each do |player| %>

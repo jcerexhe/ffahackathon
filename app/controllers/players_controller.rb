@@ -16,7 +16,11 @@ class PlayersController < ApplicationController
 
   # GET /players/new
   def new
-    @player = Player.new
+    if current_user.admin == true
+      @player = Player.new
+    else
+      redirect_to root_path, notice: 'Sorry you don\'t have access to this page.'
+    end
   end
 
   # GET /players/1/edit

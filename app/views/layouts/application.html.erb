@@ -15,7 +15,7 @@
       <%= yield %>
     </div>
     <% if notice != nil %>
-      <%#= content_tag 'div', 'hello world', id: 'notice' %>
+      <%= content_tag 'div', notice, id: 'notice', style: 'display:none' %>
       <script type="text/javascript">
         var text = $('#notice').text();
         console.log(text);

@@ -1,0 +1,81 @@
+<h4>Admin Dashboard</h4>
+
+<br><br>
+
+<div class="card">
+  <div class="card-content">
+    <h5>Users</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <td>Email</td>
+          <td>Video Count</td>
+          <td>Total Views</td>
+          <td>Points</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.videos.count %></td>
+            <td><%= user.videos.count * 23 %></td>
+            <td><%= (user.videos.count * 3 + user.videos.count * 1.5).to_i %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br>
+
+<div class="card">
+  <div class="card-content">
+    <h5>Videos</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <td>Title</td>
+          <td>Total Views</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @videos.each do |video| %>
+          <tr>
+            <td><%= video.title %></td>
+            <td>8659</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+
+<div class="card">
+  <div class="card-content">
+    <h5>Players</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Video Count</td>
+          <td>Total Views</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @players.each do |player| %>
+          <tr>
+            <td><%= player.full_name %></td>
+            <td>12</td>
+            <td>6555</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
