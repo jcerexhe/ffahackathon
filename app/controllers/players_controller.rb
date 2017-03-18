@@ -1,5 +1,6 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :new, :create, :destroy]
 
   # GET /players
   # GET /players.json
@@ -10,6 +11,7 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
+    @videos = @player.videos
   end
 
   # GET /players/new

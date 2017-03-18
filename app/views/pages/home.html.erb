@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="center-align">
+  <h1>Find your Favourite Player</h1>
+
+  <a href="/videos" class="waves-effect waves-light btn-large teal lighten-2"><i class="material-icons left">video_library</i> Library</a>
+  <a href="/players" class="waves-effect waves-light btn-large"><i class="material-icons left">list</i> Players</a>
+
+  <h4>Video of the Day</h4>
+</div>
+
+<div class="selected-video">
+  <div class="card-flex card card-selected">
+    <div class="card-image">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/<%= @random_video.video_url %>" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="card-content">
+      <%= render 'layouts/share_buttons' %>
+    </div>
+  </div>
+</div>

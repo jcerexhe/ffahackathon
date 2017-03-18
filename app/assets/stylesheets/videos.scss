@@ -19,6 +19,20 @@
   width: 30%;
 }
 
+.card-selected {
+  width: 100%;
+}
+
+.video-show-header {
+  height: 350px;
+}
+
+.video-player-photo {
+  width: 100%;
+  overflow: hidden;
+  max-height: 350px;
+}
+
 @media only screen and (max-device-width: 480px) {
   .selected-video {
     width: 100%;

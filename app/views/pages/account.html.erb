@@ -1,0 +1,12 @@
+<h4>Account</h4>
+<p><%= current_user.email %></p>
+
+<br>
+
+<h5>Your stats</h5>
+
+<p>Videos: <%= @video_count %></p>
+<p>Video views: <%= @views %></p>
+<p>Points: <%= @points %></p>
+
+<a href="/videos" class="waves-effect waves-light btn-large teal lighten-2"><i class="material-icons left">play_for_work</i> Redeem Points</a>
