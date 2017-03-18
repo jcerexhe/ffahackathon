@@ -1,24 +1,29 @@
-# README
+# FFA Hackathon Submission
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Mission: Get people excited by women's football
 
-Things you may want to cover:
+Brief: To improve the ability, access and pathway for females to become involved in the game of football as a player, coach, referee or volunteer
 
-* Ruby version
+### Installation
 
-* System dependencies
+```
+git clone git@github.com:jcerexhe/ffahackathon.git
+```
 
-* Configuration
+```
+cd ffahackathon
+```
 
-* Database creation
+```
+bundle
+```
 
-* Database initialization
+```
+rails db:create
+```
 
-* How to run the test suite
+```
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Todo: Create seeds file
