@@ -13,5 +13,13 @@
     <div class="container">
       <%= yield %>
     </div>
+    <% if notice != nil %>
+      <%#= content_tag 'div', 'hello world', id: 'notice' %>
+      <script type="text/javascript">
+        var text = $('#notice').text();
+        console.log(text);
+        Materialize.toast(text, 4000)
+      </script>
+    <% end %>
   </body>
 </html>

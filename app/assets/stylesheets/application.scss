@@ -2,3 +2,12 @@
 $primary-color: color("blue", "lighten-2") !default;
 $secondary-color: color("yellow", "base") !default;
 @import 'materialize';
+@import 'players';
+@import 'videos';
+
+body {
+  padding-bottom: 60px;
+}
+nav {
+  margin-bottom: 80px;
+}

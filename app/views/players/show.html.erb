@@ -1,0 +1,29 @@
+<div class="breadcrumbs-player">
+  <%= link_to 'Home', root_path %> > <%= link_to 'Players', players_path %> > <%= @player.full_name %>
+</div>
+
+<div class="row">
+  <div class="col s12 m4">
+    <img src="<%= @player.photo %>" alt="<%= @player.full_name %>" width="100%">
+  </div>
+  <div class="col s12 m8">
+    <h3><%= @player.full_name %></h3>
+
+    <p>
+      <strong>Hometown:</strong>
+      <%= @player.hometown %>
+    </p>
+
+    <p>
+      <strong>Current team:</strong>
+      <%= @player.current_team %>
+    </p>
+
+    <p>
+      <strong>Position:</strong>
+      <%= @player.position %>
+    </p>
+
+    <%= link_to 'Edit', edit_player_path(@player) %> |
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<%= form_for(video) do |f| %>
+  <% if video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :video_url %>
+    <%= f.text_field :video_url %>
+  </div>
+
+  <div class="input-field">
+    <%= f.collection_select :player_id, @players, :id, :full_name, prompt: true %>
+    <%= f.label :player_id %>
+    <%#= f.select(:player_id, @players) %>
+    <%#= collection_select(:video, :player_id, Player.all, :id, :first_name, prompt: true) %>
+
+    <!-- <select>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select> -->
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

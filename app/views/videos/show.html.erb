@@ -1,0 +1,30 @@
+<div class="breadcrumbs-player">
+  <%= link_to 'Home', root_path %> > <%= link_to 'Library', videos_path %> > <%= @video.title %>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video.video_url %>" frameborder="0" allowfullscreen></iframe>
+
+<h5><%= @video.title %></h5>
+
+<p>
+  <%= @video.player.full_name %>
+</p>
+
+<p>
+  <strong>Uploaded by:</strong>
+  <%= @video.user.email %>
+</p>
+
+<% @tags.each do |tag| %>
+  <div class="chip">
+    <!-- <img src="images/yuna.jpg" alt="Contact Person"> -->
+    <%= tag %>
+  </div>
+<% end %>
+
+<br><br><br>
+
+<button>Share on FB etc etc</button>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back to Library', videos_path %>

@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.5'
 # New
 gem 'devise'
 gem 'materialize-sass'
+gem 'acts-as-taggable-on', '~> 4.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri

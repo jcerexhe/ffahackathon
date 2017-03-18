@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :videos
+  resources :players
   root 'pages#home'
 
   # localhost:3000/about

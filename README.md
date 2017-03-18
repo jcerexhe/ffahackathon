@@ -7,23 +7,23 @@ Brief: To improve the ability, access and pathway for females to become involved
 ### Installation
 
 ```
-git clone git@github.com:jcerexhe/ffahackathon.git
+$ git clone git@github.com:jcerexhe/ffahackathon.git
 ```
 
 ```
-cd ffahackathon
+$ cd ffahackathon
 ```
 
 ```
-bundle
+$ bundle
 ```
 
 ```
-rails db:create
+$ rails db:create
 ```
 
 ```
-rails db:migrate
+$ rails db:migrate
 ```
 
 Todo: Create seeds file
