@@ -34,5 +34,5 @@ $ rails db:migrate
 ```
 
 ```
-$ rails db:seeds
+$ rails db:seed
 ```
