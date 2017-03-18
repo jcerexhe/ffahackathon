@@ -36,3 +36,38 @@ $ rails db:migrate
 ```
 $ rails db:seed
 ```
+
+### Usage
+
+```
+$ rails s
+```
+
+Browse at http://localhost:3000
+
+To add tags you will need to do it through the console at this time.
+
+```
+$ rails c
+```
+
+```
+video = Video.first
+```
+
+Lists tags
+```
+video.tag_list
+```
+
+Add tag
+```
+video.tag_list.add('tag you would like')
+```
+
+Save record
+```
+video.save
+```
+
+Tagging utilises the acts_as_taggable_on gem and further documentation is available from https://github.com/mbleigh/acts-as-taggable-on.
