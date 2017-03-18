@@ -1,0 +1,8 @@
+<li><a href="/videos"><i class="material-icons left">video_library</i>Library</a></li>
+<li><a href="/players"><i class="material-icons left">list</i>Players</a></li>
+<li><a href="/about"><i class="material-icons left">info_outline</i>About</a></li>
+<% if user_signed_in? %>
+  <li><%= link_to '<i class="material-icons left">lock_outline</i> Log out'.html_safe, destroy_user_session_path, method: :delete %></li>
+<% else %>
+  <li><%= link_to '<i class="material-icons left">lock_open</i> Log in'.html_safe, new_user_session_path %></li>
+<% end %>

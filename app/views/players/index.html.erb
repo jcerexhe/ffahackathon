@@ -1,37 +1,23 @@
+<h4>Players</h4>
 
+<a href="<%= new_player_path %>" class="waves-effect waves-light btn teal lighten-2"><i class="material-icons left">call_made</i>New Player</a>
 
-<h1>Players</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Hometown</th>
-      <th>Current team</th>
-      <th>Position</th>
-      <th>Position type</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @players.each do |player| %>
-      <tr>
-        <td><%= player.first_name %></td>
-        <td><%= player.last_name %></td>
-        <td><%= player.hometown %></td>
-        <td><%= player.current_team %></td>
-        <td><%= player.position %></td>
-        <td><%= player.position_type %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Player', new_player_path %>
+<div class="flex-container-wrap">
+  <% @players.each do |player| %>
+    <div class="card-flex card horizontal">
+      <div class="card-image">
+        <img src="<%= player.photo %>" height="200px">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p class="bold-text"><%= player.full_name %></p>
+          <p><%= player.position %></p>
+          <p><%= player.current_team %></p>
+        </div>
+        <div class="card-action">
+          <a href="<%= player_path(player) %>">Profile</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

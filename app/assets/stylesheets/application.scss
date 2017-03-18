@@ -1,6 +1,6 @@
 @import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
-$secondary-color: color("yellow", "base") !default;
+$primary-color: color("teal", "lighten-2") !default;
+$secondary-color: color("cyan", "lighten-3") !default;
 @import 'materialize';
 @import 'players';
 @import 'videos';
@@ -8,6 +8,15 @@ $secondary-color: color("yellow", "base") !default;
 body {
   padding-bottom: 60px;
 }
+
 nav {
   margin-bottom: 80px;
+}
+
+.btn {
+  margin: 30px 0;
+}
+
+.bold-text {
+  font-weight: 700;
 }

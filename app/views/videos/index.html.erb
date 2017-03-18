@@ -1,6 +1,6 @@
 <h4>Library</h4>
 
-<%= link_to 'New Video', new_video_path %>
+<a href="<%= new_video_path %>" class="waves-effect waves-light btn teal lighten-2"><i class="material-icons left">call_made</i>New Video</a>
 
 <% if @selected_video.present? %>
   <div class="selected-video">

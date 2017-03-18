@@ -15,5 +15,16 @@
 }
 
 .card-flex {
+  box-sizing: border-box;
+  width: 30%;
+}
 
+@media only screen and (max-device-width: 480px) {
+  .selected-video {
+    width: 100%;
+  }
+
+  .card-flex {
+    width: 100%;
+  }
 }

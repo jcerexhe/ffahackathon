@@ -1,26 +1,12 @@
 <nav>
-  <div class="nav-wrapper">
+  <div class="nav-wrapper container">
     <a href="/" class="brand-logo">FFA</a>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="/videos">Library</a></li>
-      <li><a href="/players">Players</a></li>
-      <li><a href="/about">About</a></li>
-      <% if user_signed_in? %>
-        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to 'Log in', new_user_session_path %></li>
-      <% end %>
+      <%= render 'layouts/nav_headings' %>
     </ul>
     <ul class="side-nav" id="mobile-demo">
-      <li><a href="/videos">Library</a></li>
-      <li><a href="/players">Players</a></li>
-      <li><a href="/about">About</a></li>
-      <% if user_signed_in? %>
-        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to 'Log in', new_user_session_path %></li>
-      <% end %>
+      <%= render 'layouts/nav_headings' %>
     </ul>
   </div>
 </nav>
