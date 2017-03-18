@@ -1,23 +1,27 @@
 <h4>Players</h4>
 
-<% if current_user.admin? %>
-  <a href="<%= new_player_path %>" class="waves-effect waves-light btn teal lighten-2"><i class="material-icons left">call_made</i>New Player</a>
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
+    <a href="<%= new_player_path %>" class="waves-effect waves-light btn deep-orange accent-3"><i class="material-icons left">call_made</i>New Player</a>
+  <% end %>
 <% end %>
 
 <div class="flex-container-wrap">
   <% @players.each do |player| %>
-    <div class="card-flex card horizontal">
-      <div class="card-image">
-        <img src="<%= player.photo %>" height="200px">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p class="bold-text"><%= player.full_name %></p>
-          <p><%= player.position %></p>
-          <p><%= player.current_team %></p>
+    <div class="card-flex">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="<%= player.photo %>" height="200px">
         </div>
-        <div class="card-action">
-          <a href="<%= player_path(player) %>">Profile</a>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p class="bold-text"><%= player.full_name %></p>
+            <p><%= player.position %></p>
+            <p><%= player.current_team %></p>
+          </div>
+          <div class="card-action">
+            <a href="<%= player_path(player) %>">Profile</a>
+          </div>
         </div>
       </div>
     </div>

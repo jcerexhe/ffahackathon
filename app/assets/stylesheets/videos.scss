@@ -11,12 +11,14 @@
 .flex-container-wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 .card-flex {
-  box-sizing: border-box;
-  width: 30%;
+  // box-sizing: border-box;
+  width: 33.33333%;
+  padding: 1em;
+  // margin: 20px 20px;
 }
 
 .card-selected {

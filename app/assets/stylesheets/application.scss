@@ -1,13 +1,18 @@
 @import "materialize/components/color";
-$primary-color: color("teal", "lighten-2") !default;
-$secondary-color: color("cyan", "lighten-3") !default;
+$primary-color: color("light-green", "base") !default;
+$secondary-color: color("light-green", "base") !default;
 @import 'materialize';
 @import 'players';
 @import 'videos';
 @import 'shared';
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
 
 body {
   padding-bottom: 60px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Baloo Bhaina', cursive;
 }
 
 nav {

@@ -1,6 +1,6 @@
 <h4>Library</h4>
 
-<a href="<%= new_video_path %>" class="waves-effect waves-light btn teal lighten-2"><i class="material-icons left">call_made</i>New Video</a>
+<a href="<%= new_video_path %>" class="waves-effect waves-light btn deep-orange accent-3"><i class="material-icons left">call_made</i>New Video</a>
 
 <div class="row">
   <div class="col s12 m8">
@@ -33,24 +33,26 @@
 
 <div class="flex-container-wrap">
   <% @videos.each do |video| %>
-    <div class="card-flex card">
-      <div class="card-image">
-        <iframe width="100%" height="" src="https://www.youtube.com/embed/<%= video.video_url %>" frameborder="0" allowfullscreen></iframe>
-        <!-- <span class="card-title">Card Title</span> -->
-      </div>
-      <div class="card-content">
-        <a href="/videos?video_id=<%= video.id %>">
-          <p><%= video.title.truncate(27, separator: ' ') %></p>
-        </a>
-        <a href="<%= player_path(video.player_id) %>">
-          <p><%= video.player.full_name %></p>
-        </a>
-        <% video.tag_list.each do |tag| %>
-          <div class="chip">
-            <!-- <img src="images/yuna.jpg" alt="Contact Person"> -->
-            <%= tag %>
-          </div>
-        <% end %>
+    <div class="card-flex">
+      <div class="card">
+        <div class="card-image">
+          <iframe width="100%" height="" src="https://www.youtube.com/embed/<%= video.video_url %>" frameborder="0" allowfullscreen></iframe>
+          <!-- <span class="card-title">Card Title</span> -->
+        </div>
+        <div class="card-content">
+          <a href="/videos?video_id=<%= video.id %>">
+            <p><%= video.title.truncate(27, separator: ' ') %></p>
+          </a>
+          <a href="<%= player_path(video.player_id) %>">
+            <p><%= video.player.full_name %></p>
+          </a>
+          <% video.tag_list.each do |tag| %>
+            <div class="chip">
+              <!-- <img src="images/yuna.jpg" alt="Contact Person"> -->
+              <%= tag %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>
