@@ -14,7 +14,7 @@ To solve the above objectives I identified a lack of user generated content whic
 Rails version 5.0.2
 
 ```
-$ git clone git@github.com:jcerexhe/ffahackathon.git
+$ git clone https://github.com/jcerexhe/ffahackathon.git
 ```
 
 ```
@@ -70,4 +70,4 @@ Save record
 video.save
 ```
 
-Tagging utilises the acts_as_taggable_on gem and further documentation is available from https://github.com/mbleigh/acts-as-taggable-on.
+Tagging utilises the acts_as_taggable_on gem, further documentation is available from https://github.com/mbleigh/acts-as-taggable-on.
