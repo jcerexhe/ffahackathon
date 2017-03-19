@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Create a user first!!
-admin = User.create(email: 'admin@ffa.com', password: 'womensfootballweek', admin: true)
+admin = User.create(email: 'admin@ffa.com', password: 'femalefootballweek', admin: true)
 puts 'Created admin'
 
 player1 = Player.create(first_name: 'Michelle', last_name: 'Heyman', hometown: 'Shellharbour, Australia', current_team: 'Canberra United', position: 'Striker', position_type: 'Forward', photo: 'http://www1.pictures.zimbio.com/gi/Michelle+Heyman+Canberra+United+Headshots+C8boW4X81mFl.jpg')
